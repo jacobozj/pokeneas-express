@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# Archivos de entorno
+.env
+
+# Archivos de logs
+*.log
+
+# Dependencias generadas automáticamente
+package-lock.json
+
+# Archivos de sistema (si usas macOS o Windows)
+.DS_Store
+Thumbs.db
