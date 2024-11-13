@@ -8,6 +8,7 @@ const pokeneaRoutes = require('./src/routes/pokeneaRoutes');
 
 app.use(pokeneaRoutes);
 
-app.listen(port, () => {
-    console.log(`App running on port ${port}`);
+app.listen(80, '0.0.0.0', () => {
+    console.log("Server is listening on port 80");
 });
+
