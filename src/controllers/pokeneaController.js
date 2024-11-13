@@ -1,4 +1,5 @@
 // controllers/pokeneaController.js
+const os = require("os")
 const pokeneas = require('../models/pokeneaModel');
 
 const getRandomPokenea = (req, res) => {
@@ -8,7 +9,7 @@ const getRandomPokenea = (req, res) => {
 
 const getPokeneaImageAndPhilosophy = (req, res) => {
     const randomPokenea = pokeneas[Math.floor(Math.random() * pokeneas.length)];
-    res.send(`<img src="${randomPokenea.imageUrl}" alt="${randomPokenea.name}"><p>${randomPokenea.philosophy}</p><p>Container ID: ${process.env.CONTAINER_ID}</p>`);
+    res.send(`<img src="${randomPokenea.imageUrl}" alt="${randomPokenea.name}"><p>${randomPokenea.philosophy}</p><p>Container ID: ${os.hostname()}</p>`);
 };
 
 module.exports = { getRandomPokenea, getPokeneaImageAndPhilosophy };
