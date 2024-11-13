@@ -5,7 +5,8 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
-ENV PORT=${PORT}  # Carga el puerto desde el archivo .env
-EXPOSE ${PORT}
+
+# Elimina ENV PORT=${PORT}
+EXPOSE 3000  # Coloca un puerto predeterminado para exponer en la imagen
 
 CMD ["node", "index.js"]
